@@ -42,7 +42,6 @@ export class CourseDialogComponent implements AfterViewInit {
             longDescription: [course.longDescription,Validators.required]
         });
 
-        // this.loadingService.loadingOn();
 
     }
 
