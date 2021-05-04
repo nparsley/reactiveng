@@ -24,10 +24,7 @@ export class HomeComponent implements OnInit {
 
 
   constructor(
-    // private coursesService: CoursesService,
-    private coursesStore: CoursesStore,
-    // private loadingService: LoadingService,
-    // private messagesService: MessagesService
+    private coursesStore: CoursesStore
     ) {
 
   }
@@ -39,20 +36,6 @@ export class HomeComponent implements OnInit {
   }
 
   reloadCourses() {
-
-/*     const courses$ = this.coursesService.loadAllCourses().pipe(
-      map(courses => courses.sort(sortCoursesBySeqNo)),
-      catchError(err => {
-        const message = 'could not load courses';
-        this.messagesService.showErrors(message);
-        console.log(message, err);
-        return throwError(err);
-      })
-    ); */
-
-    // const loadCourses$ = this.loadingService.showLoaderUntilCompleted(courses$);
-
-    // courses$.subscribe(val => console.log(val));
 
     this.beginnerCourses$ = this.coursesStore.filterByCategory('BEGINNER');
 
